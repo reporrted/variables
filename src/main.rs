@@ -1,17 +1,18 @@
 fn main() {
-    // addition
-    let sum = 5 + 10;
+    let x: i32 = 5;
 
-    // subtraction
-    let difference = 95.5 - 4.3;
+    let x: i32 = x + 1;
 
-    // multiplication
-    let product = 4 * 30;
+    {
+        let x: i32 = x * 2;
+        println!("The value of x in the inner scope is: {x}");
+    }
 
-    // division
-    let quotient = 56.7 / 32.2;
-    let floored = 2 / 3; // Results in 0
+    println!("The value of x is: {x}");
 
-    // remainder
-    let remainder = 43 % 5;
+    another_function(x)
+}
+
+fn another_function(x: i32) {
+    println!("Secret number: {}", x);
 }
